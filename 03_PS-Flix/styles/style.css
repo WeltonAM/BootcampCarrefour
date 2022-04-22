@@ -1,0 +1,242 @@
+:root {
+    --black: #141414;
+}
+
+header{
+    padding: 30px;
+    background: linear-gradient(180deg, rgb(0, 0, 0) 0%, rgba(0,0,0,0) 100%);
+    position: absolute;
+    width: 100%;
+    top: 0;
+    z-index: 2;
+    display: flex;
+    align-items: center;
+}
+
+header img{
+    width: 130px;
+    cursor: pointer;
+}
+
+#white-btn{
+    background-color: #fff;
+}
+
+#white-btn:hover{
+    opacity: 0.8;
+}
+
+#trans-btn{
+    background-color: rgba(255, 255, 255, 0.199);
+    color: #fff;
+}
+
+#trans-btn:hover{
+    opacity: 0.8;
+    color: #fff;
+}
+
+#container-body{
+    background-color: var(--black);
+}
+
+.menu_list{
+    list-style: none;
+    margin: 0 0 0 -15px;
+    padding: 0;
+}
+
+.menu_list li{
+    display: inline-block;
+    margin-left: 15px;
+}
+
+.menu_list li a{
+    color: #fff;
+    text-decoration: none;
+}
+
+#hero{
+    height: 700px;
+    background-image: url(../imgs/horizon-forbidden-west.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    position: absolute;
+    z-index: 1;
+    top: 0;
+}
+
+#hero::after{
+    content: '';
+    width: 100%;
+    height: 200px;
+    display: block;
+    background: linear-gradient(360deg, var(--black) 5%, rgba(0, 0, 0, 0) 100%);
+    position: absolute;
+    left: 0;
+    z-index: 0;
+    top: calc(700px - 200px);
+}
+
+#hero-infos{
+    padding: 0;
+    margin-top: 170px;
+    z-index: 3;
+    position: relative;
+}
+
+#hero-infos a{
+    text-decoration: none;
+}
+
+#hero-infos p{
+    width: 52%;
+}
+
+#hero-infos img.logo{
+    margin-bottom: 50px;
+}
+
+#main-populares{
+    background-color: var(--black);
+    margin-top: 700px;
+    font-size: 18px;
+    font-weight: 500;
+    height: 50vh;
+}
+
+#main-populares .container-fluid{
+    padding-left: 35px;
+    margin-bottom: -10px;
+}
+
+section{
+    background-color: var(--black);
+}
+
+#info-1{
+    z-index: 9999;
+}
+
+#section-2{
+    margin-top: -80px;
+}
+
+.games img{
+    width: 250px;
+    height: 150px;
+}
+
+.btn-custom-round{
+    padding: 5px 9px !important;
+}
+
+.opacity-50{
+    opacity: 0.5;
+}
+
+.games_list{
+    overflow-x: scroll;
+    list-style: none;
+    white-space: nowrap;
+    padding-left: 25px;
+    display: block;
+    border: 1px solid transparent;
+}
+
+.games_list::-webkit-scrollbar{
+    display: none;
+}
+
+.games{
+    display: inline-block;
+    width: 250px;
+    margin-right: 10px;
+    overflow: hidden;
+    transition: .4s;
+    overflow: auto;
+    border: 1px solid transparent;
+}
+
+.games:hover{
+    cursor: pointer;
+    transform: scale(1.05);
+    transition: .3s;
+}
+
+.games:hover .game-info{
+    transform: scale(1);
+    transition: .3s;
+}
+
+.games:first-child{
+    margin-left: 12px;
+}
+
+.game-info{
+    background-color: #171717;
+    padding: 10px;
+    height: 100px;
+    width: 100%;
+    transform: scale(0);
+}
+
+.game-info .col-12{
+    margin-top: 5px;
+}
+
+.game-info .col-12:first-child{
+    margin-bottom: 20px;
+    padding-left: 0px;
+}
+
+.game-info p{
+    color: #7e7b7b;
+    font-size: 12px;
+}
+
+.game-info p text{
+    color: #fff;
+}
+
+@media(max-width: 964px){
+    
+    .menu_list{
+        margin-left: 10px;
+    }
+
+}
+
+@media(max-width: 781px){
+    
+    .menu_list{
+        position: relative;
+        padding-left: 40px;
+    }
+
+}
+
+@media(max-width: 623px){
+    
+    header{
+        display: flex;
+        flex-direction: column;
+        padding: 30px 0;
+        align-content: center;
+        align-items: flex-start;
+    }
+    
+    .menu_list{
+        padding: 0;
+    }
+
+}
+
+@media(max-width: 516px){
+    
+    .menu_list{
+        margin-left: -3px;
+    }
+
+}
